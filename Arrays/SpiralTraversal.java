@@ -1,0 +1,56 @@
+// spiral traversal of a matrix
+import java.util.Scanner;
+
+public class SpiralTraversal {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter rows and columns: ");
+        int r = sc.nextInt();
+        int c = sc.nextInt();
+
+        int[][] arr = new int[r][c];
+
+        System.out.println("Enter matrix:");
+
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        int top = 0;
+        int bottom = r - 1;
+        int left = 0;
+        int right = c - 1;
+
+        System.out.println("Spiral Traversal:");
+
+        while (top <= bottom && left <= right) {
+
+            // Left to Right
+            for (int i = left; i <= right; i++) {
+                System.out.print(arr[top][i] + " ");
+            }
+            top++;
+
+            // Top to Bottom
+            for (int i = top; i <= bottom; i++) {
+                System.out.print(arr[i][right] + " ");
+            }
+            right--;
+
+            // Right to Left
+            for (int i = right; i >= left; i--) {
+                System.out.print(arr[bottom][i] + " ");
+            }
+            bottom--;
+
+            // Bottom to Top
+            for (int i = bottom; i >= top; i--) {
+                System.out.print(arr[i][left] + " ");
+            }
+            left++;
+        }
+    }
+}
