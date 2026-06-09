@@ -13,7 +13,7 @@ class Node {
     }
 }
 
-public class Main {
+public class CloningList {
 
     static Node cloneList(Node head) {
 
