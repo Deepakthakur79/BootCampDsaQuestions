@@ -24,7 +24,7 @@ public class MergeList {
         Scanner sc = new Scanner(System.in);
 
         // First List
-        System.out.print("Enter nodes in List 1: ");
+        System.out.print("Enter size in List 1: ");
         int n1 = sc.nextInt();
 
         Node head1 = null, tail1 = null;
@@ -42,7 +42,7 @@ public class MergeList {
         }
 
         // Second List
-        System.out.print("Enter nodes in List 2: ");
+        System.out.print("Enter size in List 2: ");
         int n2 = sc.nextInt();
 
         Node head2 = null, tail2 = null;
