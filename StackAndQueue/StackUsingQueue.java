@@ -2,7 +2,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {
+public class StackUsingQueue {
 
     static Queue<Integer> q1 = new LinkedList<>();
     static Queue<Integer> q2 = new LinkedList<>();
