@@ -1,7 +1,7 @@
 //Implementation of min stack 
 import java.util.Stack;
 
-public class Main {
+public class MinStack {
 
     static Stack<Integer> stack = new Stack<>();
     static Stack<Integer> minStack = new Stack<>();
