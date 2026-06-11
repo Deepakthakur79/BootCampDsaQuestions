@@ -1,5 +1,5 @@
 // find the largest rectangle in histogram
-public class Main {
+public class LargestRectangleHistogram {
     public static void main(String[] args) {
 
         int arr[] = {2, 1, 5, 6, 2, 3};
