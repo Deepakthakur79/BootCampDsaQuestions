@@ -2,7 +2,7 @@
 //k = window ka size (ek baar me kitne elements consider karne hain).
 import java.util.Scanner;
 
-public class Main {
+public class FirstNegative {
     public static void main(String[] args) {
 
         int arr[] = {-8, 2, 3, -6, 10};
