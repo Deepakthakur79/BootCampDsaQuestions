@@ -1,7 +1,7 @@
 // celebrity problem  using stack
 import java.util.Stack;
 
-public class Main {
+public class celebrityProblem {
 
     static int findCelebrity(int arr[][], int n) {
 
