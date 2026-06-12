@@ -1,5 +1,5 @@
 // trapping rain water
-public class Main {
+public class trappingRainWatter {
 
     public static void main(String[] args) {
 
