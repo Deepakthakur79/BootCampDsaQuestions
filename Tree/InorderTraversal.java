@@ -1,3 +1,4 @@
+// Inorder Traversal using Array Representation .
 import java.util.Scanner;
 public class InorderTraversal {
 
