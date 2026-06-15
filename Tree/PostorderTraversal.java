@@ -1,4 +1,6 @@
 // Postorder Traversal using Array Representation .
+//Left->Right->Root 
+// visit the node 3rd time
 import java.util.Scanner;
 public class PostorderTraversal {
         static void postorder(int tree[], int i) {
@@ -10,7 +12,7 @@ public class PostorderTraversal {
         System.out.print(tree[i] + " ");
     }
     public static void main(String[] args) {
-        int tree[] = {1, 2, 3, 4, 5, 6, 7};
+        int tree[] = {1, 2, 3, 4, 5, 6, 7, 8,9,10};
 
         System.out.print("Postorder: ");
         postorder(tree, 0);
