@@ -1,4 +1,6 @@
 // Inorder Traversal using Array Representation .
+// Left->Root->Right
+// visit the node 2nd time
 import java.util.Scanner;
 public class InorderTraversal {
 
