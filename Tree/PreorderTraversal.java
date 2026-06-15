@@ -1,4 +1,6 @@
 // Preorder Traversal using Array Representation .
+// Root->Left->Right
+//visit the node 1st time
 import java.util.Scanner;
 public class PreorderTraversal {
     static void preorder(int tree[], int i) {
