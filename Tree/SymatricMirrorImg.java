@@ -1,21 +1,24 @@
-//Symatric tree (mirror image)
 import java.util.Scanner;
 
-public class Main {
+public class SymatricMirrorImg {
+
+    static boolean isMirror(int tree[], int left, int right) {
+
+        if (left >= tree.length && right >= tree.length)
+            return true;
+
+        if (left >= tree.length || right >= tree.length)
+            return false;
+
+        if (tree[left] != tree[right])
+            return false;
+
+        return isMirror(tree, 2 * left + 1, 2 * right + 2)
+                && isMirror(tree, 2 * left + 2, 2 * right + 1);
+    }
 
     static boolean isSymmetric(int tree[]) {
-
-        int n = tree.length;
-
-        for (int i = 1; i <= (n - 1) / 2; i++) {
-
-            int mirror = n - i;
-
-            if (tree[i] != tree[mirror])
-                return false;
-        }
-
-        return true;
+        return isMirror(tree, 1, 2);
     }
 
     public static void main(String[] args) {
