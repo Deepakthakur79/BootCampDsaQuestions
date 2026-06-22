@@ -7,7 +7,7 @@
 
 import java.util.*;
 
-class ZigZag {
+class ZigZagTraversal {
 
     static class Node {
         int data;
