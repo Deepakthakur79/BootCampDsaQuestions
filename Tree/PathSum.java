@@ -2,8 +2,6 @@
 // koi aisa path hai ya nahi jiska total sum given value ke equal ho.
 //Root value + child values + .... + leaf value = Target Sum
 
-import java.util.*;
-
 class PathSum {
 
     static class Node {
@@ -12,25 +10,22 @@ class PathSum {
 
         Node(int data) {
             this.data = data;
-            left = right = null;
         }
     }
 
-    static boolean hasPathSum(Node root, int targetSum) {
+    static boolean pathSum(Node root, int sum) {
 
-        if (root == null)
+        if(root == null)
             return false;
 
-        // leaf node condition
-        if (root.left == null && root.right == null) {
-            return targetSum == root.data;
-        }
+        // leaf node
+        if(root.left == null && root.right == null)
+            return sum == root.data;
 
-        // subtract current node value
-        int remaining = targetSum - root.data;
+        sum = sum - root.data;
 
-        return hasPathSum(root.left, remaining) ||
-               hasPathSum(root.right, remaining);
+        return pathSum(root.left, sum) ||
+               pathSum(root.right, sum);
     }
 
 
@@ -42,7 +37,7 @@ class PathSum {
         root.right = new Node(8);
 
         root.left.left = new Node(11);
-
+        
         root.right.left = new Node(13);
         root.right.right = new Node(4);
 
@@ -50,11 +45,8 @@ class PathSum {
         root.left.left.right = new Node(2);
 
 
-        int targetSum = 22;
+        int target = 22;
 
-        if (hasPathSum(root, targetSum))
-            System.out.println("Path exists");
-        else
-            System.out.println("Path does not exist");
+        System.out.println(pathSum(root, target));
     }
 }
