@@ -1,42 +1,55 @@
-import java.util.Scanner;
+class Solution {
 
-public class SymatricMirrorImg {
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
-    static boolean isMirror(int tree[], int left, int right) {
+        TreeNode(int val) {
+            this.val = val;
+            left = null;
+            right = null;
+        }
+    }
 
-        if (left >= tree.length && right >= tree.length)
+
+    public static boolean isSymmetric(TreeNode root) {
+
+        if(root == null)
             return true;
 
-        if (left >= tree.length || right >= tree.length)
-            return false;
-
-        if (tree[left] != tree[right])
-            return false;
-
-        return isMirror(tree, 2 * left + 1, 2 * right + 2)
-                && isMirror(tree, 2 * left + 2, 2 * right + 1);
+        return check(root.left, root.right);
     }
 
-    static boolean isSymmetric(int tree[]) {
-        return isMirror(tree, 1, 2);
+
+    public static boolean check(TreeNode p, TreeNode q) {
+
+        if(p == null && q == null)
+            return true;
+
+        if(p == null || q == null)
+            return false;
+
+        if(p.val != q.val)
+            return false;
+
+        return check(p.left, q.right) &&
+               check(p.right, q.left);
     }
+
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        TreeNode root = new TreeNode(1);
 
-        System.out.print("Enter number of elements: ");
-        int n = sc.nextInt();
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(2);
 
-        int tree[] = new int[n];
+        root.left.left = new TreeNode(3);
+        root.right.right = new TreeNode(3);
 
-        System.out.println("Enter elements:");
 
-        for (int i = 0; i < n; i++) {
-            tree[i] = sc.nextInt();
-        }
-
-        if (isSymmetric(tree))
+        if(isSymmetric(root))
             System.out.println("Symmetric Tree");
         else
             System.out.println("Not Symmetric Tree");
