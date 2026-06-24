@@ -1,4 +1,4 @@
-class Solution {
+class SymmetricMirrorImg {
 
     static class TreeNode {
         int val;
