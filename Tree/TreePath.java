@@ -1,4 +1,5 @@
 //binary tree paths
+//Binary Tree Paths ka matlab hota hai: root se leaf node tak ke saare paths print karna.
 
 import java.util.*;
 
