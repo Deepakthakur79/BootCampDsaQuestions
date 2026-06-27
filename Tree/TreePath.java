@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-class BinaryTreePaths {
+class TreePath {
 
     static class Node {
 
