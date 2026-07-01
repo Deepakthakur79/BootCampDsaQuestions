@@ -10,7 +10,7 @@ class TreeNode {
     }
 }
 
-class LCA {
+class LCATree{
 
     public TreeNode lowestCommonAncestor(TreeNode root,TreeNode p,TreeNode q) {
 
